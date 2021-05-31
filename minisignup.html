@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Started!!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="minilogin.css">
+	<link rel="icon"  href="favicon.ico">
+</head>
+<body>
+	<div class="center1">
+		<h1 class="Heading">Create an Account</h1>
+		<form>
+			<div class="text_field">
+				<input type="text" name="" required>
+				<span></span>
+				<label>Username</label>
+
+			</div>
+			<div class="text_field1">
+				<input type="text" list="Educational Qualification"/>
+				<datalist id="Educational Qualification">
+					<option>High School</option>
+					<option>Graduate</option>
+					<option>Post Graduate</option>
+				</datalist>
+				<label>Educational Qualification</label>
+			</div>
+			<div class="text_field1">
+				<input type="text" list="Degree"/>
+				<datalist id="Degree">
+					<option>B.tech/B.E</option>
+					<option>B.Sc/B.A/B.Com</option>
+					<option>Masters</option>
+				</datalist>
+				<label>Degree</label>
+			</div>
+			<div class="text_field1">
+				<input type="text" name="" required>
+				<span></span>
+				<label>Area of Specialization</label>
+			</div>
+			<div class="text_field1">
+			<input type="text" name="" required>
+				<span></span>
+				<label>Email Id</label>
+             </div>
+			
+			<div class="text_field1">
+				<input type="password" name="" required class="pass">
+				<span></span>
+				<label>Password</label>
+				
+			</div>
+			<div class="text_field1">
+				<input type="password" name="" class="confirm" required>
+				<span></span>
+				<label>Confirm Password</label>
+			</div>
+			<input type="submit"  class="button" value="Submit">
+			<div class="login_link">
+				Already a member? <a href="minilogin.html">Login</a>
+			</div>
+		</form>
+		<script >
+			document.querySelector('.button').onclick =
+			function(){
+				var password = document.querySelector('.pass').value,
+				    confirmPass = document.querySelector('.confirm').value;
+				    if (password == ""){
+				    	alert("Field cannot be empty.")
+				    }
+				    else if(password!=confirmPass){
+				    	alert("Password did'nt match");
+				    	return false
+				    }
+				    else if (password==confirmPass){
+				    	alert("Password matches.")
+				    }
+				    return true
+			}
+		</script>
+</body>
+</html>
